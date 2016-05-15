@@ -9,19 +9,16 @@ var app =express();
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/a/:id",function (req,res) {
-    var id=req.params.id;
-    res.send("Hello::"+id);
-});
+
 
 app.post("/b/:id1",function (req,res) {
-    var id=req.params.id;
-    res.send("Hellow hi::"+id);
+    var id=req.params.id1;
+    var name=req.params.id1;
+    res.send("Hellow hi::"+id+"::"+name);
 
 })
 
-
 app.listen(3000,function (){
-    console.log("server started");
+    console.log("server started!!!!");
 
 });
