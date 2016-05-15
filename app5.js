@@ -8,11 +8,17 @@ var app =express();
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/vk",function (req,res) {
-    var reqjson={"host":req.headers.host}
+app.get("/path",function (req,res) {
+    var reqjson={"host":req.headers.host}//acess heder
     res.json(reqjson);
+});
 
 
+app.post("/hd",function (req,res) {
+    var name="shashikant";
+    req.headers.name=name;
+    var reqjson={"host":req.headers,"name":req.headers.name}//custom hedar
+    res.json(reqjson);
 });
 
 
